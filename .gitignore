@@ -1,0 +1,4 @@
+model/.vscode/
+model/dataset/
+model/test_images/
+*.pkl
