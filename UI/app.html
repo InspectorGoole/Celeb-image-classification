@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Classifier</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-success mb-4">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">Celebrity Classifier</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col card-wrapper" data-celebrity="Angelina_Jolie">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/angelina_jolie.jpg" alt="Angelina Jolie">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h6 class="text-uppercase card-title">Angelina Jolie</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat for other celebrities -->
+            <!-- Similar blocks for: Brad Pitt, Denzel Washington, Tom Hanks, etc. -->
+            <!-- Only including a few for brevity -->
+
+            <div class="col card-wrapper" data-celebrity="Brad_Pitt">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/brad_pitt.jpg" alt="Brad Pitt">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h6 class="text-uppercase card-title">Brad Pitt</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col card-wrapper" data-celebrity="Tom_Cruise">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="./images/tom.jpg" alt="Tom Cruise">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h6 class="text-uppercase card-title">Tom Cruise</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <form action="/file-upload" class="dropzone" id="dropzone">
+                    <div class="dz-message needsclick">
+                        <img src="./images/upload.png" width="50" height="50" alt="Upload icon">
+                        <p class="mb-0">Drop image here or click to upload</p>
+                    </div>
+                </form>
+                <button id="submitBtn" type="button" class="btn btn-success w-100 mt-3">Classify</button>
+            </div>
+            
+            <div class="col-md-6">
+                <div id="error" class="error-message">
+                    Cannot classify image. Please ensure the image contains a clear face with visible eyes.
+                </div>
+                <div id="resultHolder"></div>
+                <div id="divClassTable">
+                    <table id="classTable">
+                        <thead>
+                            <tr>
+                                <th>Celebrity</th>
+                                <th>Probability Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Angelina Jolie</td>
+                                <td id="score_angelina_jolie"></td>
+                            </tr>
+                            <tr>
+                                <td>Brad Pitt</td>
+                                <td id="score_brad_pitt"></td>
+                            </tr>
+                            <tr>
+                                <td>Tom Cruise</td>
+                                <td id="score_tom_cruise"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./dropzone.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

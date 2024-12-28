@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Card Styles */
+.card-wrapper {
+    margin: 1.5rem 0;
+    transition: transform 0.3s ease;
+}
+
+.card-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.custom-circle-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.custom-circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Dropzone Styles */
+.dropzone {
+    border: 2px dashed #28a745;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.dropzone:hover {
+    border-color: #218838;
+}
+
+.dz-message {
+    margin: 0;
+}
+
+/* Error Message Styles */
+.error-message {
+    color: #dc3545;
+    padding: 1rem;
+    border-radius: 10px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+/* Table Styles */
+#classTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#classTable th,
+#classTable td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+#classTable th {
+    background-color: #28a745;
+    color: white;
+    font-weight: 600;
+}
+
+#classTable tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#classTable tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Button Styles */
+#submitBtn {
+    padding: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .custom-circle-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .card-title {
+        font-size: 0.9rem;
+    }
+}
