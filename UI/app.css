@@ -3,10 +3,17 @@ body {
     background-color: #f8f9fa;
 }
 
+/* .row {
+    width:15%;  
+    display:inline-block;
+} */
+
 /* Card Styles */
 .card-wrapper {
     margin: 1.5rem 0;
     transition: transform 0.3s ease;
+    width:15%;  
+    display:inline-block;
 }
 
 .card-wrapper:hover {
@@ -51,6 +58,8 @@ body {
     background: #fff;
     cursor: pointer;
     transition: border-color 0.3s ease;
+    height: 50;
+    width: 50;
 }
 
 .dropzone:hover {
